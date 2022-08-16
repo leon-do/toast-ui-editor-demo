@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="https://uicdn.toast.com/editor/latest/toastui-editor.min.css" />
+
+<div id="editor"></div>
+<br />
+<button onClick="getMarkdown()">Get Markdown</button>
+
+<script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
+
+<script>
+  const Editor = toastui.Editor;
+  const editor = new Editor({
+    el: document.querySelector("#editor"),
+    height: "200px", // auto
+    initialEditType: "wysiwyg", // markdown
+    previewStyle: "vertical",
+  });
+
+  function getMarkdown() {
+    const markdown = editor.getMarkdown();
+    console.log(markdown);
+  }
+</script>
