@@ -17,6 +17,9 @@
 
   function getMarkdown() {
     const markdown = editor.getMarkdown();
-    console.log(markdown);
+    console.log(markdown.replaceAll('\n', '<br/>'));
+
+    const html = editor.getHTML();
+    console.log(html);
   }
 </script>
